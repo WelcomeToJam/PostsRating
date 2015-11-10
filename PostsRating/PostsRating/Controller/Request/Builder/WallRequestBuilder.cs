@@ -1,4 +1,4 @@
-﻿namespace PostsRating.Controller.RequestBuilder
+﻿namespace PostsRating.Controller.Request.Builder
 {
     class WallRequestBuilder : RequestBuilder
     {

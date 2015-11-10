@@ -33,6 +33,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,11 +47,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\RequestBuilder\FriendRequestBuilder.cs" />
-    <Compile Include="Controller\RequestBuilder\LikeRequestBuilder.cs" />
-    <Compile Include="Controller\RequestBuilder\RequestBuilder.cs" />
-    <Compile Include="Controller\RequestBuilder\UserRequestBuilder.cs" />
-    <Compile Include="Controller\RequestBuilder\WallRequestBuilder.cs" />
+    <Compile Include="Controller\Request\Builder\FriendRequestBuilder.cs" />
+    <Compile Include="Controller\Request\Builder\LikeRequestBuilder.cs" />
+    <Compile Include="Controller\Request\Builder\RequestBuilder.cs" />
+    <Compile Include="Controller\Request\Builder\UserRequestBuilder.cs" />
+    <Compile Include="Controller\Request\Builder\WallRequestBuilder.cs" />
+    <Compile Include="Controller\Request\Sender\ApiRequest.cs" />
+    <Compile Include="Controller\Request\Sender\FriendsRequest.cs" />
+    <Compile Include="Controller\Request\Sender\LikeRequest.cs" />
+    <Compile Include="Controller\Request\Sender\UserRequest.cs" />
+    <Compile Include="Controller\Request\Sender\WallRequest.cs" />
+    <Compile Include="Controller\ResponseParser.cs" />
+    <Compile Include="Controller\ResponseReader.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
@@ -55,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

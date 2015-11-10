@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace PostsRating.Controller.RequestBuilder
+namespace PostsRating.Controller.Request.Builder
 {
     abstract class RequestBuilder
     {
