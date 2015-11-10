@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\PostsRating.cs" />
     <Compile Include="Controller\Request\Builder\FriendRequestBuilder.cs" />
     <Compile Include="Controller\Request\Builder\LikeRequestBuilder.cs" />
     <Compile Include="Controller\Request\Builder\RequestBuilder.cs" />
@@ -59,6 +60,7 @@
     <Compile Include="Controller\Request\Sender\WallRequest.cs" />
     <Compile Include="Controller\ResponseParser.cs" />
     <Compile Include="Controller\ResponseReader.cs" />
+    <Compile Include="Controller\UserLinkParser.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
