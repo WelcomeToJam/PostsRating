@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\RequestBuilder\FriendRequestBuilder.cs" />
+    <Compile Include="Controller\RequestBuilder\LikeRequestBuilder.cs" />
+    <Compile Include="Controller\RequestBuilder\RequestBuilder.cs" />
+    <Compile Include="Controller\RequestBuilder\UserRequestBuilder.cs" />
+    <Compile Include="Controller\RequestBuilder\WallRequestBuilder.cs" />
     <Compile Include="Model\Post.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Program.cs" />
