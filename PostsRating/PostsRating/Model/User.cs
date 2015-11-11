@@ -25,6 +25,5 @@ namespace PostsRating.Model
             posts.Add(new Post(postId, id));
         }
     }
+}
 
-}
-}
