@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace PostsRating.Controller
 {
-    class PostsRating
+    class PostsRatingMaker
     {
         private User targetUser;
         private FriendsRequest vkFriends;
@@ -14,7 +14,7 @@ namespace PostsRating.Controller
         private List<Post> topPosts;
         private int timeToLive = (int)(DateTime.Now.AddDays(-7) - new DateTime(1970, 1, 1)).TotalSeconds;
 
-        public PostsRating()
+        public PostsRatingMaker()
         {
             vkFriends = new FriendsRequest();
             vkWall    = new WallRequest();
@@ -49,6 +49,7 @@ namespace PostsRating.Controller
                 List<string> postsList;
                 foreach (User friend in usersList)
                 {
+                    //postsList = vkWall.getFriendsPosts(friend, timeToLive);
                     postsList = vkWall.getFriendsPosts(friend, timeToLive);
                     if (postsList != null && postsList.Count > 0)
                     {

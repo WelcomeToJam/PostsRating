@@ -1,15 +1,14 @@
-﻿using System.Text;
-
-namespace PostsRating.Controller.Request.Builder
+﻿namespace PostsRating.Controller.Request.Builder
 {
     abstract class RequestBuilder
     {
-        protected StringBuilder serverName { get; set; }
+        protected string serverName { get; set; }
         protected string methodName { get; set; }
+        protected string request { get; set; }
 
         protected RequestBuilder()
         {
-            serverName = new StringBuilder("https://api.vk.com/method/");
+            serverName = "https://api.vk.com/method/";
         }
         abstract public string buildRequest(string userId);
     }

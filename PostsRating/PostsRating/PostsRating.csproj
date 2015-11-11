@@ -47,7 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\PostsRating.cs" />
+    <Compile Include="Controller\PostsRatingMaker.cs" />
     <Compile Include="Controller\Request\Builder\FriendRequestBuilder.cs" />
     <Compile Include="Controller\Request\Builder\LikeRequestBuilder.cs" />
     <Compile Include="Controller\Request\Builder\RequestBuilder.cs" />

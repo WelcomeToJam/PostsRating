@@ -1,1 +1,8 @@
 C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\bin\Debug\PostsRating.exe.config
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\obj\Debug\PostsRating.csprojResolveAssemblyReference.cache
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\bin\Debug\PostsRating.exe
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\bin\Debug\PostsRating.pdb
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\obj\Debug\PostsRating.exe
+C:\Users\Artyom\Documents\Visual Studio 2015\Projects\PostsRating\PostsRating\PostsRating\obj\Debug\PostsRating.pdb

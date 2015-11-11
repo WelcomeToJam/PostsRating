@@ -8,7 +8,8 @@
         }
         public override string buildRequest(string userId)
         {
-            return (serverName.Append(methodName).Append("user_id=").Append(userId)).ToString();
+            request = string.Empty;
+            return request = serverName + methodName + "user_id=" + userId;
         }
     }
 }

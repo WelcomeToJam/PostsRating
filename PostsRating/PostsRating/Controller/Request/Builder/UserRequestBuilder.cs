@@ -8,7 +8,8 @@
         }
         public override string buildRequest(string linkToUser)
         {
-            return (serverName.Append(methodName).Append("user_ids=").Append(linkToUser)).ToString();
+            request = string.Empty;
+            return request = serverName + methodName + "user_ids=" + linkToUser;
         }
     }
 }

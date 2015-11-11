@@ -39,11 +39,16 @@ namespace PostsRating.Controller
                     {
                         if (id.Next != null)
                         {
-                            if (Convert.ToInt32(id.Next["date"]) > timeToLive)
+                            int postTime = Convert.ToInt32(id.Next["date"]);
+                            //if (Convert.ToInt32(id.Next["date"]) > timeToLive)
+                            if (postTime > timeToLive)
                             {
                                 idArr.Add(Convert.ToString(id.Next["id"]));
                             }
-                            else { break; }
+                            else
+                            {
+                                break;
+                            }
                         } // if (id.Next)
                     } // foreach
                 } // if (json["response"]
