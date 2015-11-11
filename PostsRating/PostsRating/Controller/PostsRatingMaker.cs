@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 namespace PostsRating.Controller
 {
+    // Основной класс программы, составляющий рейтинг из 10 самых популярных
+    // (исходя из кол-ва лайков) записей.
     class PostsRatingMaker
     {
         private User targetUser;
@@ -23,10 +25,15 @@ namespace PostsRating.Controller
         // Составить рейтинг из 10 самых популярных записей
         public void toRankPosts(string linkToUser)
         {
-            targetUser = new User(linkToUser);
-            if (targetUser == null) { return; }
-            setFriendsToUser();
-            setPostsToUsersFriends();
+            if(setUser(linkToUser))
+            {
+                setFriendsToUser();
+                setPostsToUsersFriends();
+            }
+            else
+            {
+                Console.WriteLine("Некорректная ссылка на пользователя.");
+            }
         }
         // Получить список друзей для целевого пользователя
         private void setFriendsToUser()
@@ -49,7 +56,6 @@ namespace PostsRating.Controller
                 List<string> postsList;
                 foreach (User friend in usersList)
                 {
-                    //postsList = vkWall.getFriendsPosts(friend, timeToLive);
                     postsList = vkWall.getFriendsPosts(friend, timeToLive);
                     if (postsList != null && postsList.Count > 0)
                     {
@@ -60,6 +66,28 @@ namespace PostsRating.Controller
                     }
                 } // foreach (User friend)
             } // if (userList)
+        }
+        private bool setUser(string linkToUser)
+        {
+            try
+            {
+                string userValue = UserLinkParser.parseLink(linkToUser);
+                if (char.IsDigit(userValue, 0))
+                {
+                    targetUser = new User(userValue);
+                    return true;
+                }
+                targetUser = new User(vkUser.getUser(userValue).ToString());
+                if (targetUser == null)
+                {
+                    return false;
+                }
+                else return true;
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                throw new ArgumentOutOfRangeException();
+            }
         }
         private void getLikesForPosts()
         {
