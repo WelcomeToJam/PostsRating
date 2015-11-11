@@ -4,8 +4,10 @@ using System.Collections.Generic;
 
 namespace PostsRating.Controller
 {
+    // Класс преобразющий json ответ в List<string>.
     class ResponseParser
     {
+        // Возвращает список строк из json ответа.
         public static List<string> parseResponse(string response)
         {
             try
@@ -26,7 +28,8 @@ namespace PostsRating.Controller
                 throw new ArgumentNullException();
             }
         }
-
+        // Возвращает список строк из json ответа с указанием перода времени, 
+        // за который следует брать строки.
         public static List<string> parseResponse(string response, int timeToLive)
         {
             try
@@ -40,7 +43,6 @@ namespace PostsRating.Controller
                         if (id.Next != null)
                         {
                             int postTime = Convert.ToInt32(id.Next["date"]);
-                            //if (Convert.ToInt32(id.Next["date"]) > timeToLive)
                             if (postTime > timeToLive)
                             {
                                 idArr.Add(Convert.ToString(id.Next["id"]));

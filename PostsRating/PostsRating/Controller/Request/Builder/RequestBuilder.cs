@@ -1,5 +1,6 @@
 ﻿namespace PostsRating.Controller.Request.Builder
 {
+    // Абстрактный класс, составляющий запрос к vk api
     abstract class RequestBuilder
     {
         protected string serverName { get; set; }

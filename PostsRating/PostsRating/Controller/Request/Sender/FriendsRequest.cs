@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace PostsRating.Controller.Request.Sender
 {
+    // Класс для отправления запроса к vk api friends
     class FriendsRequest : ApiRequest
     {
         public FriendsRequest()

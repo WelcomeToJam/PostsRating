@@ -1,5 +1,6 @@
 ﻿namespace PostsRating.Controller.Request.Builder
 {
+    // Класс, составляющий запрос к vk api wall
     class WallRequestBuilder : RequestBuilder
     {
         public WallRequestBuilder() : base()

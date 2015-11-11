@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 namespace PostsRating.Controller.Request.Sender
 {
+    // Класс для отправления запроса к vk api wall
     class WallRequest : ApiRequest
     {
         public WallRequest() { builder = new WallRequestBuilder(); }

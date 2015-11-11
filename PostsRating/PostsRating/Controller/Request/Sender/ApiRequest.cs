@@ -3,6 +3,7 @@ using System.Net;
 
 namespace PostsRating.Controller.Request.Sender
 {
+    // Абстрактный класс для отправления запроса к vk api
     abstract class ApiRequest
     {
         protected RequestBuilder builder;

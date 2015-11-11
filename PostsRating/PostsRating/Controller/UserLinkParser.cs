@@ -2,7 +2,7 @@
 
 namespace PostsRating.Controller
 {
-    // Класс проверяющий корректность пользовательской ссылки 
+    // Класс для работы с ссылкой на пользователя
     class UserLinkParser
     {
         private static string serverPattern = "^(https?:\\/\\/)?vk.com\\/";

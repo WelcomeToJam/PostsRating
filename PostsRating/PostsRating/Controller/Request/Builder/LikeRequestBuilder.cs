@@ -1,5 +1,6 @@
 ﻿namespace PostsRating.Controller.Request.Builder
 {
+    // Класс, составляющий запрос к vk api like
     class LikeRequestBuilder : RequestBuilder
     {
         public LikeRequestBuilder() : base()

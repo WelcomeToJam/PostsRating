@@ -1,5 +1,6 @@
 ﻿namespace PostsRating.Controller.Request.Builder
 {
+    // Класс, составляющий запрос к vk api friend
     class FriendRequestBuilder : RequestBuilder
     {
         public FriendRequestBuilder() : base()
