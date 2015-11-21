@@ -1,4 +1,6 @@
-﻿namespace PostsRating.Controller.Request.Builder
+﻿using PostsRating.Model;
+
+namespace PostsRating.Controller.Request.Builder
 {
     // Класс, составляющий запрос к vk api like
     class LikeRequestBuilder : RequestBuilder
@@ -7,10 +9,19 @@
         {
             methodName = "likes.getList?";
         }
-        public override string buildRequest(string userId)
+        public override string buildRequest(User user)
         {
             request = string.Empty;
-            return request = serverName + methodName + "user_id=" + userId;
+            if (user != null)
+            {
+                return request = serverName + methodName + "type=post" + "&owner_id=" + user.id +
+                    "&item_id=" + user.getNextPost().id + "&filter=likes";
+            }
+            else
+            {
+                throw new System.NullReferenceException();
+            }
         }
     }
 }
+

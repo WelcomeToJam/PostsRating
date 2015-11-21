@@ -65,5 +65,31 @@ namespace PostsRating.Controller
                 throw new NullReferenceException();
             }
         } // end of method
+        public static int getNumberElements(string response)
+        {
+            try
+            {
+                JObject json = JObject.Parse(response);   
+                var count = json["response"];
+
+                if (count != null)
+                {
+                    return Convert.ToInt32(count["count"]);
+                }
+                else
+                {
+                    return 0;
+                }                
+                
+            }
+            catch (ArgumentNullException)
+            {
+                throw new ArgumentNullException();
+            }
+            catch (NullReferenceException)
+            {
+                throw new NullReferenceException();
+            }
+        }
     }
 }

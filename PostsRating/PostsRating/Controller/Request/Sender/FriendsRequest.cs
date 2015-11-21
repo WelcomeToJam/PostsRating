@@ -14,7 +14,7 @@ namespace PostsRating.Controller.Request.Sender
         // Получить список друзей пользователя
         public List<string> getUsersFriends(User user)
         {
-            return ResponseParser.parseResponse(response(builder.buildRequest(user.id)));
+            return ResponseParser.parseResponse(response(builder.buildRequest(user)));
         }
     }
 }

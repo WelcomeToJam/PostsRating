@@ -11,7 +11,8 @@ namespace PostsRating
             //string linkToUser = Console.ReadLine();
             //-------------------------------------------
             PostsRatingMaker top = new PostsRatingMaker();
-            top.toRankPosts("https://vk.com/id60703958");
+            top.findMostPopular("https://vk.com/id60703958");
+            top.printMostPopular();
             Console.ReadKey();
         }
     }

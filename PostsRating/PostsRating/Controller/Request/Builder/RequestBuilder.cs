@@ -1,4 +1,6 @@
-﻿namespace PostsRating.Controller.Request.Builder
+﻿using PostsRating.Model;
+
+namespace PostsRating.Controller.Request.Builder
 {
     // Абстрактный класс, составляющий запрос к vk api
     abstract class RequestBuilder
@@ -11,6 +13,6 @@
         {
             serverName = "https://api.vk.com/method/";
         }
-        abstract public string buildRequest(string userId);
+        abstract public string buildRequest(User user);
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PostsRating.Controller.Request.Builder;
+using PostsRating.Model;
 using System.Collections.Generic;
 
 namespace PostsRating.Controller.Request.Sender
@@ -8,9 +9,9 @@ namespace PostsRating.Controller.Request.Sender
     {
         public UserRequest() { builder = new UserRequestBuilder(); }
         // Получить информация о пользователе по ссылке 
-        public List<string> getUser(string userId)
+        public List<string> getUser(User user)
         {
-            return ResponseParser.parseResponse(response(builder.buildRequest(userId)));
+            return ResponseParser.parseResponse(response(builder.buildRequest(user)));
         }
     }
 }

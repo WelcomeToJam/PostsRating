@@ -1,6 +1,5 @@
 ﻿using PostsRating.Controller.Request.Builder;
 using PostsRating.Model;
-using System.Collections.Generic;
 
 namespace PostsRating.Controller.Request.Sender
 {
@@ -12,9 +11,16 @@ namespace PostsRating.Controller.Request.Sender
             builder = new LikeRequestBuilder();
         }
         // Получить список друзей пользователя
-        public List<string> getLikes(User user)
+        public int getLikes(User user)
         {
-            return ResponseParser.parseResponse(response(builder.buildRequest(user.id)));
+            if (user != null)
+            { 
+                return ResponseParser.getNumberElements(response(builder.buildRequest(user)));
+            }
+            else
+            {
+                throw new System.NullReferenceException();
+            }
         }
     }
 }

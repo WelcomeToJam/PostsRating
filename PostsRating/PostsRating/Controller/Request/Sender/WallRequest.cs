@@ -11,7 +11,7 @@ namespace PostsRating.Controller.Request.Sender
         // Получить список новостей друзей пользователя
         public List<string> getFriendsPosts(User user, int timeToLive)
         {
-            return ResponseParser.parseResponse(response(builder.buildRequest(user.id)), timeToLive);
+            return ResponseParser.parseResponse(response(builder.buildRequest(user)), timeToLive);
         }
     }
 }
